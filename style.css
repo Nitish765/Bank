@@ -1,0 +1,151 @@
+*,::before,::after{
+    margin: 0;
+    box-sizing: border-box;
+}
+body{font-family: sans-serif; background-color: #fff;}
+a{text-decoration: none;}
+iframe{border: none;}
+button{cursor: pointer;}
+img{vertical-align: bottom;}
+label{display: inline-block;}
+
+.container{max-width: 1200px; margin: auto; padding: 0 15px;}
+.row{display: flex; flex-flow: row wrap; padding: 0 -15px; row-gap: 70px;}
+.row [class^="col-"]{flex: 1 1 auto; padding: 0 15px; }
+
+.row .col-1{flex-basis: 8.33%; max-width: 8.33%;}
+.row .col-2{flex-basis: 16.66%; max-width: 16.66%;}
+.row .col-3{flex-basis: 25%; max-width: 25%;}
+.row .col-4{flex-basis: 33.33%; max-width: 33.33%;}
+.row .col-5{flex-basis: 41.66; max-width: 41.66%;}
+.row .col-6{flex-basis: 50%; max-width: 50%;}
+.row .col-7{flex-basis: 58.33%; max-width: 58.33%;}
+.row .col-8{flex-basis: 66.66%; max-width: 66.66%;}
+.row .col-9{flex-basis: 75%; max-width: 75%;}
+.row .col-10{flex-basis: 83.33%;}
+.row .col-11{flex-basis: 91.66;}
+.row .col-12{flex-basis: 100%; max-width: 100%;}
+
+.wrap-1{background: #362833; overflow: hidden;}
+.wrap-1 p{animation: animate1 20s infinite; color: #fff; font-weight: bold; padding: 5px 0;}
+@keyframes animate1{
+    from{transform: translateX(0);}
+    to{transform: translateX(100%);}
+}
+
+.wrap-2{background: #3d3dae; padding: 5px 0; }
+.wrap-2 .row{align-items: center;}
+/* .wrap-2 .row .col-6 nav{} */
+.wrap-2 .col-3 h1{font-size: 30px; line-height: 50px; color: #fff;}
+.wrap-2 .col-3 h1 span{color: #f00; font-size: 30px;}
+.wrap-2 .row .col-8 nav #show, #hide{font-size: 15px; border-radius: 7px; border: none; display: none; padding: 7px 12px; background-color: red; color: #fff;}
+.wrap-2 .row .col-8 nav ul{display: flex; list-style: none;}
+.wrap-2 .row .col-8 nav ul li{padding: 6px 15px; color: #a3979791; cursor: pointer; font-size: 16px; position: relative;}
+.wrap-2 .row .col-8 .submenu{border-radius: 10px; position: absolute; background: rgb(183, 218, 160); text-align: center; width: 400px; height: auto; display: none;}
+.wrap-2 .row .col-8 .submenu ul{display: block;}
+.wrap-2 .row .col-8 nav ul li:hover{
+    color: rgb(255, 255, 255);
+}
+.wrap-2 .row .col-8 nav ul li:hover .submenu{
+    display: block;
+}
+.wrap-2 .row .col-8 .submenu ul li:hover{background: rgb(117, 108, 108);}
+.wrap-2 .row .col-8 .submenu ul li a{padding: 8px 15px; line-height: 30px; color: rgb(255, 255, 255);}
+.wrap-2 .row .col-1 button{border: none; padding: 8px 16px; color: #fff; background: #db3939; border-radius: 3px;}
+@keyframes animate{
+    from{transform: scale(1,1);}
+    to{transform: scale(1.2,1.2);}
+}
+
+
+.wrap-3{background: url(/images/back4.jpg); background-size: cover; padding: 199px 0; color: #a08c42;}
+.wrap-3 .row .col-8 .pay{padding: 5px 0; text-align: left;}
+.wrap-3 .row .col-8 .pay h2{font-size: 50px; font-family: sans-serif; line-height: 60px; text-shadow: 2px 2px 4px #000;}
+.wrap-3 .row .col-8 .pay p{font-size: 16px; font-family: sans-serif; line-height: 20px; color: #000;}
+.wrap-3 .row .col-8 .pay button{padding: 12px 25px; border-radius: 7px; background-color: #00f; color: #fff;
+     margin-top: 15px; border: none; font-size: 17px;}
+
+.wrap-4{padding: 40px 0;}
+.wrap-4 .row .col-4 .services{padding: 50px 10px; height: 500px; background: #fff; box-shadow: 1px 1px 10px 2px #000;}
+.wrap-4 .row .col-4 .services img{width: 100%; height: 250px;}
+.wrap-4 .row .col-4 .services span{font-size: 17px; line-height: 40px;}
+.wrap-4 .row .col-4 .services h3{font-size: 25px; font-family: sans-serif; line-height: 35px;}
+.wrap-4 .row .col-4 .services p{font-size: 16px; font-family: sans-serif; line-height: 20px;}
+.wrap-4 .row .col-4 .services a{padding: 13px 15px; color: red; float: right; font-family: 22px;}
+
+.wrap-5{padding: 50px 0; background: rgb(0, 0, 47);}
+.wrap-5 .row{row-gap: 50px;}
+.wrap-5 .row .col-6 .social{padding: 60px 0;}
+.wrap-5 .row .col-6 .social h2{font-size: 28px; color: #f00; line-height: 50px;}
+.wrap-5 .row .col-6 .social label{line-height: 30px; font-size: 17px;}
+.wrap-5 .row .col-6 .social label input{font-size: 18px; padding: 7px 10px; max-width: 100%; height: 35px; border-radius: 3px;}
+.wrap-5 .row .col-6 .social label button{border: none; border-radius: 5px; padding: 10px 15px; color: #fff; background-color: purple;}
+.wrap-5 .row .col-4 .content{text-align: center;}
+.wrap-5 .row .col-4 .content h3{font-size: 22px; color: #fff; line-height: 30px;}
+.wrap-5 .row .col-4 .content ul{list-style: none;}
+.wrap-5 .row .col-4 .content ul li a{font-size: 15px; line-height: 35px; color: rgb(116, 109, 109); display: block;}
+.wrap-5 .row .col-4 .content ul li a:hover{color: #fff;}
+
+@media screen and (max-width: 1220px){ /*break-point*/
+
+    .container{width: 960px}
+    .wrap-2 .col-2 h1{font-size: 30px; line-height: 40px;};
+    .wrap-2 .col-2 h1 span {color: #ff0; font-size: 30px;}
+    .wrap-2 .col-2 h3{font-size: 40px; line-height: 50px;}
+    .wrap-3 .col-2 p{font-size: 15px; line-height: 19px;};
+    .wrap-3 .row .col-8 .pay{padding: 7px 30px;}
+    .wrap-4 .row .col-4 .services{padding: 40px 20px;}
+    .wrap-4 .row .col-4 .services h3 {
+        font-size: 23px;
+     }
+     .wrap-4 .row .col-4 .services img{height: 220px;}
+}
+@media screen and (max-width: 980px){  /*break-point*/
+
+    .container{width: 730px;}
+    .wrap-2 .col-2 h1{font-size: 30px; line-height: 40px;};
+    .wrap-2 .col-2 h1 span {color: #ff0; font-size: 30px;}
+    .wrap-2 .row .col-8 nav ul li{font-size: 14px;}
+    .wrap-3{padding: 130px 0;}
+    .wrap-3 .row .col-8 .pay h2{font-size: 36px; line-height: 48px;}
+    .wrap-3 .row .col-8 .pay p{font-size: 14px; line-height: 20px;}
+    .wrap-3 .row .col-8 .pay button{padding: 7px 11px; font-size: 14px;}
+    .wrap-4 .row .col-4{flex-basis: 50%; max-width: 50%;}
+    .wrap-4 .row .col-4 .services{padding: 20px 10px;}
+    .wrap-4 .row .col-4 .services h3 {
+        font-size: 24px;
+     }
+     .wrap-4 .row .col-4 .services img{height: 280px;}
+}
+@media screen and (max-width: 673px) /*break-point*/
+{
+    .container{width: 650px;}
+}
+
+@media screen and (max-width: 450px)
+{
+    .container{width: 415px;}
+    .wrap-2 .row{row-gap: 20px;}
+    .wrap-2 .row .col-3{flex-basis: 100%; max-width: 100%;}
+    .wrap-2 .row .col-3 h1{font-size: 30px; line-height: 35px;}
+    .wrap-2 .col-8{flex-basis: 80%; max-width: 80%;}
+    .wrap-2 .row .col-1{flex-basis: 20%; max-width: 20%;}
+    .wrap-2 .row .col-1 a button{padding: 7px 9px; font-size: 11px;}
+    .wrap-2 .row .col-8 nav{position: relative;}
+    .wrap-2 .row .col-8 nav ul{flex-flow: column wrap; position: absolute; display: none; color: #000;}
+    .wrap-2 .row .col-8 nav .menu{width: 400px; height: 400px; padding: 5px 10px; background: wheat; color: #fff;}
+    .wrap-2 .row .col-8 nav ul li{color: #000;}
+    .wrap-2 .row .col-8 .submenu{ background: #000;}
+    .wrap-2 .row .col-8 nav #show{display: block;}
+    .wrap-2 .row .col-8 nav #hide{display: none;}
+    .wrap-3{background-position: center; padding: 230px 0;}
+    .wrap-3 .container .row .col-8{flex-basis: 100%; max-width: 100%;}
+    .wrap-3 .container .row .col-8 .pay h2{font-size: 27px; line-height: 32px;}
+    .wrap-4 .row .col-4{flex-basis: 100%; max-width: 100%;}
+    .wrap-5 .row .col-4{flex-basis: 100%; max-width: 100%;}
+    .wrap-5 .row .col-6 .social label button{margin-top: 6px;}
+}
+
+@media screen and (max-width: 400px){
+      .container{width: 350px;}
+}
